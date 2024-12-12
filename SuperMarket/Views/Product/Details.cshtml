@@ -1,0 +1,9 @@
+﻿@using SuperMarket.Models
+@{
+    var product = ViewData["Product"] as Product;
+}
+
+<h1>Detalhes do Produto</h1>
+<p>ID: @product.Id</p>
+<p>Nome: @product.Name</p>
+<p>Preço: @product.Price</p>

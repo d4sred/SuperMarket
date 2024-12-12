@@ -1,0 +1,25 @@
+﻿@using SuperMarket.Models
+@{
+    var products = ViewData["Products"] as List<Product>;
+}
+
+<h1>Lista de Produtos</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
